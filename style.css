@@ -65,3 +65,23 @@ footer a:hover {
     margin-top: 50px;
 }
 
+.info-box {
+    display: none;
+    background: #fff3f3;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.toggle-butn {
+    background: #ff1b67;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.toggle-btn:hover {
+    background: #d81b60;
+}
