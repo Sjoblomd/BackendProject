@@ -14,6 +14,7 @@ $first_visit = getFirstVisitTime();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Match N' Meet</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/MNMFavicon.png">
 </head>
 
 <body>
@@ -31,7 +32,6 @@ $first_visit = getFirstVisitTime();
             <p>Timezone: <?php echo $server_info['timezone']; ?></p>
             <p>First Visit: <?php echo $first_visit; ?></p>
         </div>
-
         <script src="scripts/toggleInfo.js"></script>
 
         <?php include "includes/footer.php"; ?>
