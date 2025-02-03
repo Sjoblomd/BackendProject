@@ -3,6 +3,7 @@ session_start();
 include "includes/functions.php";
 
 $user_ip = $_SERVER['REMOTE_ADDR'];
+$username = $_SESSION['username'] ?? 'Guest';
 $server_info = getServerInfo();
 $first_visit = getFirstVisitTime();
 ?>
@@ -28,6 +29,7 @@ $first_visit = getFirstVisitTime();
         <button class="toggle-butn" >Show Info</button>
         <div class="info-box" id="infoBox">
             <p>Your IP Address: <?php echo $user_ip; ?></p>
+            <p>Username: <?php echo $username; ?></p>
             <p>Server: <?php echo $server_info['server_name']; ?></p>
             <p>Timezone: <?php echo $server_info['timezone']; ?></p>
             <p>First Visit: <?php echo $first_visit; ?></p>

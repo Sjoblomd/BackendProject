@@ -1,5 +1,4 @@
 <?php
-// pages/register.php
 session_start();
 include '../includes/functions.php';
 
@@ -20,6 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($errors)) {
         $password = substr(md5(rand()), 0, 8); // Random Pass gen
         
+        $_SESSION['username'] = htmlspecialchars($username, ENT_QUOTES, 'UTF-8');
+        $_SESSION['email'] = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
+
         // Email sender
         $subject = "Welcome to Match N' Meet";
         $message = "Hello $username,\n\nYour account has been created. Your password is: $password\n";
@@ -62,11 +64,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <?php if (!empty($success)): ?>
             <div class="success-box">
-                <p><?php echo $success; ?></p>
+                <p><?php echo htmlspecialchars($success); ?></p>
             </div>
         <?php endif; ?>
 
-        <form action="register.php" method="POST">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             <input type="text" name="username" placeholder="Username" required>
             <input type="email" name="email" placeholder="Email" required>
             <button type="submit">Register</button>
