@@ -32,7 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             $errors[] = "Failed to send email.";
         }
+
+        header("Location: ../pages/profile.php");
     }
+    
 }
 ?>
 <!DOCTYPE html>

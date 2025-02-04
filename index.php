@@ -21,7 +21,7 @@ $first_visit = getFirstVisitTime();
 
 <body>
     <div class="container">
-        <?php include "header.php"; ?>
+        <?php include "includes/header.php"; ?>
 
         <h2>Welcome to Match N' Meet</h2>
         <p>Find your perfect match today!</p>
@@ -41,7 +41,7 @@ $first_visit = getFirstVisitTime();
         <p>Unique Visitors: <strong><?php echo countVisitors(); ?></strong></p>
 
         <script src="scripts/toggleInfo.js"></script>
-        <?php include "footer.php"; ?>
+        <?php include "includes/footer.php"; ?>
     </div>
 </body>
 </html>
