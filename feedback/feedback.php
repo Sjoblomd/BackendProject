@@ -1,23 +1,20 @@
+<?php
+session_start();
+include '../includes/functions.php';
+?>
 <!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reflektion & Feedback</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="images/MNMFavicon.png">
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <h1>Match N' Meet</h1>
-            <nav>
-                <a href="index.php">Hem</a>
-                <a href="profile.php">Profil</a>
-                <a href="contact.php">Kontakt</a>
-            </nav>
-        </header>
+        <?php include '../includes/header.php'; ?>
 
         <h2>Reflektion & Feedback</h2>
         <p>Här sammanfattar vi våra tankar kring inlärningen, utmaningar och förbättringar för kursen.</p>
@@ -48,9 +45,7 @@
             <p>Slutligen hade det varit bra om kursen hade inkluderat fler praktiska projekt där vi fick bygga en mer komplett webbplats från start till slut, med en databas och användarhantering.</p>
         </section>
 
-        <footer>
-            <p>&copy; 2025 Match N' Meet. Alla rättigheter förbehållna.</p>
-        </footer>
+        <?php include "../includes/footer.php"; ?>
     </div>
 </body>
 </html>
