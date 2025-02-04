@@ -3,6 +3,6 @@
     <div>
         <a href="about.php">About</a>
         <a href="contact.php">Contact</a>
-        <a href="terms.php">Terms of Service</a>
+        <a href="../BackendProject/feedback/feedback.html">Webbraport</a>
     </div>
 </footer>
