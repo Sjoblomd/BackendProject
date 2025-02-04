@@ -8,19 +8,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["date"])) {
     $now = time();
 
     if ($date === false || $date <= $now) {
-        $countdownMessage = "Ogiltigt eller passerat datum!";
+        $countdownMessage = "Invalid or past date!";
     } else {
         $initialTimeLeft = $date - $now; // Tidsdifferens i sekunder
-        $countdownMessage = "Nedräkningen har startats. Nedräkning visas nedan.";
+        $countdownMessage = "The countdown has started. The countdown is displayed below.";
     }
 }
 ?>
 
-<h3>Nedräkning till ditt datum</h3>
+<h3>Countdown to your date</h3>
 <form action="" method="post">
-    <label for="date">Välj ett datum:</label>
+    <label for="date">Choose a date:</label>
     <input type="date" id="date" name="date" required>
-    <button type="submit">Starta nedräkning</button>
+    <button type="submit">begin countdown</button>
 </form>
 
 <p id="countdownMessage"><?php echo $countdownMessage; ?></p>
@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["date"])) {
 
     function updateCountdown() {
         if (timeLeft <= 0) {
-            document.getElementById("countdown").textContent = "Nedräkningen är avslutad!";
+            document.getElementById("countdown").textContent = "Countdown ended";
             clearInterval(countdownInterval);
         } else {
             const days = Math.floor(timeLeft / (60 * 60 * 24)); 
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["date"])) {
             const seconds = timeLeft % 60; 
 
             document.getElementById("countdown").textContent =
-                `Tid kvar till ditt datum: ${days} dagar, ${hours} timmar, ${minutes} minuter, ${seconds} sekunder.`;
+                `time left: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} secounds.`;
 
             timeLeft--; // Minska tiden kvar med 1 sekund
         }
